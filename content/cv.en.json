@@ -1,0 +1,138 @@
+{
+  "lang": "en",
+  "name": "Jae Won Choi, M.D.",
+  "name_secondary": "최재원",
+  "role": "Clinical Assistant Professor, Department of Radiology",
+  "tagline": "Radiologist · Pediatric radiology · AI and deep learning in medical imaging",
+  "affiliation": "Seoul National University Hospital",
+  "bio": "I am a pediatric radiologist at Seoul National University Hospital. My research focuses on developing and validating deep learning methods for medical imaging, including pediatric radiographs, MRI, and CT.",
+  "focus": [
+    "Pediatric Radiology",
+    "Artificial Intelligence",
+    "Deep Learning in Medical Imaging"
+  ],
+  "labels": {
+    "skip": "Skip to content",
+    "nav_about": "About",
+    "nav_experience": "Experience",
+    "nav_publications": "Publications",
+    "nav_research": "Research",
+    "nav_awards": "Awards",
+    "language": "한국어",
+    "download_pdf": "Download English CV",
+    "view_orcid": "View ORCID",
+    "about": "About",
+    "contact": "Contact",
+    "experience": "Appointments & Training",
+    "education": "Education",
+    "licenses": "Certification & Licensure",
+    "publications": "Publications",
+    "publications_note": "Automatically synchronized from the public ORCID record.",
+    "publications_total": "{count} works in total",
+    "publications_lead": "First & Corresponding Author",
+    "publications_co": "Co-authored",
+    "lead_star_note": "* First author (incl. co-first) or corresponding author (incl. co-corresponding)",
+    "research": "Research Projects",
+    "awards": "Awards",
+    "presentations": "Selected Presentations",
+    "publication_count": "ORCID works",
+    "award_count": "Awards",
+    "project_count": "Projects",
+    "present": "Present",
+    "last_synced": "ORCID last synchronized",
+    "source": "Data source",
+    "generated": "This CV is generated from the same data as the website.",
+    "email": "Email",
+    "address": "Address",
+    "scholar": "Google Scholar",
+    "orcid": "ORCID",
+    "footer_note": "Pediatric radiology and deep learning for medical imaging."
+  },
+  "experience": [
+    {
+      "title": "Clinical Assistant Professor",
+      "organization": "Seoul National University Hospital",
+      "period": "Mar 2025 – Present",
+      "detail": "Department of Radiology"
+    },
+    {
+      "title": "Clinical Fellow, Pediatric Radiology",
+      "organization": "Seoul National University Hospital",
+      "period": "May 2024 – Feb 2025",
+      "detail": "Department of Radiology"
+    },
+    {
+      "title": "Medical Officer",
+      "organization": "Armed Forces Yangju Hospital",
+      "period": "Apr 2021 – Apr 2024",
+      "detail": "Department of Radiology"
+    },
+    {
+      "title": "Resident, Radiology",
+      "organization": "Seoul National University Hospital",
+      "period": "Mar 2017 – Feb 2021",
+      "detail": "Department of Radiology"
+    },
+    {
+      "title": "Rotating Intern",
+      "organization": "Seoul National University Hospital",
+      "period": "Mar 2016 – Feb 2017",
+      "detail": ""
+    }
+  ],
+  "education": [
+    {
+      "title": "Ph.D. Candidate in Radiology",
+      "organization": "Seoul National University College of Medicine",
+      "period": "Mar 2025 – Present",
+      "detail": ""
+    },
+    {
+      "title": "M.S. in Radiology",
+      "organization": "Seoul National University College of Medicine",
+      "period": "Mar 2018 – Feb 2021",
+      "detail": ""
+    },
+    {
+      "title": "M.D.",
+      "organization": "Seoul National University College of Medicine",
+      "period": "Mar 2012 – Feb 2016",
+      "detail": ""
+    }
+  ],
+  "licenses": [],
+  "projects": [],
+  "awards": [
+    {
+      "title": "FeTA Challenge 2024 — 1st place, Biometry",
+      "organization": "MICCAI / University of Zurich",
+      "date": "Oct 2024",
+      "detail": ""
+    },
+    {
+      "title": "AICONNECT 2022 Dental Dataset Construction AI Competition — 1st place",
+      "organization": "Seoul National University Dental Hospital",
+      "date": "Nov 2022",
+      "detail": ""
+    },
+    {
+      "title": "FLARE 2022 Challenge — 10th place",
+      "organization": "MICCAI / University of Toronto",
+      "date": "Sep 2022",
+      "detail": ""
+    },
+    {
+      "title": "SNUH Medical AI Challenge 2021",
+      "organization": "Seoul National University Hospital",
+      "date": "Dec 2021",
+      "detail": "Robotic Surgery, 1st place\nNuclear Medicine, 3rd place\nVoice AI, 3rd place"
+    },
+    {
+      "title": "CrossMoDA 2021 Challenge — 3rd place",
+      "organization": "MICCAI / King's College London",
+      "date": "Sep 2021",
+      "detail": ""
+    }
+  ],
+  "presentations": []
+}

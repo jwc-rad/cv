@@ -1,0 +1,138 @@
+{
+  "lang": "ko",
+  "name": "최재원",
+  "name_secondary": "Jae Won Choi, M.D.",
+  "role": "서울대학교병원 영상의학과 진료교수",
+  "tagline": "영상의학과 전문의 · 소아영상의학 · 의료영상 인공지능·딥러닝 연구",
+  "affiliation": "서울대학교병원 영상의학과",
+  "bio": "서울대학교병원 소아영상의학 진료교수입니다. 소아 X선, MRI, CT 등 의료영상을 위한 딥러닝 기법을 개발하고 검증하는 연구를 하고 있습니다.",
+  "focus": [
+    "소아영상의학",
+    "인공지능",
+    "의료영상 딥러닝"
+  ],
+  "labels": {
+    "skip": "본문으로 건너뛰기",
+    "nav_about": "소개",
+    "nav_experience": "경력",
+    "nav_publications": "논문",
+    "nav_research": "연구",
+    "nav_awards": "수상",
+    "language": "English",
+    "download_pdf": "한글 CV PDF",
+    "view_orcid": "ORCID 보기",
+    "about": "소개",
+    "contact": "연락처",
+    "experience": "경력",
+    "education": "학력",
+    "licenses": "자격 및 면허",
+    "publications": "논문",
+    "publications_note": "ORCID 공개 레코드에서 자동으로 동기화됩니다.",
+    "publications_total": "전체 {count}편",
+    "publications_lead": "주저자 논문",
+    "publications_co": "공저자 논문",
+    "lead_star_note": "* 주저자(제1저자·공동 제1저자) 또는 교신저자(공동 교신저자) 논문",
+    "research": "연구과제",
+    "awards": "수상",
+    "presentations": "학술 발표",
+    "publication_count": "ORCID 논문",
+    "award_count": "수상",
+    "project_count": "연구과제",
+    "present": "현재",
+    "last_synced": "ORCID 최종 동기화",
+    "source": "데이터 출처",
+    "generated": "이 CV는 웹사이트와 동일한 데이터로 자동 생성되었습니다.",
+    "email": "이메일",
+    "address": "주소",
+    "scholar": "Google Scholar",
+    "orcid": "ORCID",
+    "footer_note": "소아영상의학과 의료영상 인공지능 연구를 연결합니다."
+  },
+  "experience": [
+    {
+      "title": "영상의학과 진료교수",
+      "organization": "서울대학교병원",
+      "period": "2025.03 – 현재",
+      "detail": ""
+    },
+    {
+      "title": "소아영상의학 전임의",
+      "organization": "서울대학교병원",
+      "period": "2024.05 – 2025.02",
+      "detail": "영상의학과"
+    },
+    {
+      "title": "영상의학과 군의관",
+      "organization": "국군양주병원",
+      "period": "2021.04 – 2024.04",
+      "detail": ""
+    },
+    {
+      "title": "영상의학과 전공의",
+      "organization": "서울대학교병원",
+      "period": "2017.03 – 2021.02",
+      "detail": ""
+    },
+    {
+      "title": "인턴",
+      "organization": "서울대학교병원",
+      "period": "2016.03 – 2017.02",
+      "detail": ""
+    }
+  ],
+  "education": [
+    {
+      "title": "영상의학 박사과정",
+      "organization": "서울대학교 의과대학",
+      "period": "2025.03 – 현재",
+      "detail": ""
+    },
+    {
+      "title": "영상의학 석사",
+      "organization": "서울대학교 의과대학",
+      "period": "2018.03 – 2021.02",
+      "detail": ""
+    },
+    {
+      "title": "의학사",
+      "organization": "서울대학교 의과대학",
+      "period": "2012.03 – 2016.02",
+      "detail": ""
+    }
+  ],
+  "licenses": [],
+  "projects": [],
+  "awards": [
+    {
+      "title": "FeTA Challenge 2024 Biometry 부문 1위",
+      "organization": "MICCAI / University of Zurich",
+      "date": "2024.10",
+      "detail": ""
+    },
+    {
+      "title": "AICONNECT 2022 치과 데이터셋 구축 AI 경진대회 1위",
+      "organization": "서울대학교치과병원",
+      "date": "2022.11",
+      "detail": ""
+    },
+    {
+      "title": "FLARE 2022 Challenge 10위",
+      "organization": "MICCAI / University of Toronto",
+      "date": "2022.09",
+      "detail": ""
+    },
+    {
+      "title": "서울대학교병원 Medical AI Challenge 2021",
+      "organization": "서울대학교병원",
+      "date": "2021.12",
+      "detail": "Robotic Surgery 부문 1위\n핵의학 부문 3위\nVoice AI 부문 3위"
+    },
+    {
+      "title": "CrossMoDA 2021 Challenge 3위",
+      "organization": "MICCAI / King's College London",
+      "date": "2021.09",
+      "detail": ""
+    }
+  ],
+  "presentations": []
+}

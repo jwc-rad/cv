@@ -1,0 +1,20 @@
+{
+  "orcid_id": "0000-0002-5937-7238",
+  "photo": "assets/profile.png",
+  "contact": {
+    "emails": [
+      "djc0105@gmail.com"
+    ],
+    "address_ko": "서울특별시 종로구 대학로 101, 서울대학교병원 영상의학과 (03080)",
+    "address_en": "Department of Radiology, Seoul National University Hospital, 101 Daehak-ro, Jongno-gu, Seoul 03080, Republic of Korea"
+  },
+  "links": {
+    "orcid": "https://orcid.org/0000-0002-5937-7238",
+    "google_scholar": "https://scholar.google.com/citations?user=t_daDr8AAAAJ"
+  },
+  "site": {
+    "theme_color": "#1f3a5f",
+    "show_photo": true,
+    "base_url": "https://jwc-rad.github.io/cv"
+  }
+}

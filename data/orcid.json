@@ -1,0 +1,1948 @@
+{
+  "orcid_id": "0000-0002-5937-7238",
+  "orcid_url": "https://orcid.org/0000-0002-5937-7238",
+  "api_record_url": "https://pub.orcid.org/v3.0/0000-0002-5937-7238/record",
+  "name": {
+    "given": "Jae Won",
+    "family": "Choi",
+    "credit": ""
+  },
+  "last_synced_utc": "2026-09-29T04:06:10Z",
+  "record_last_modified_utc": "2026-04-08T15:06:09.458000Z",
+  "works": [
+    {
+      "put_code": 210951558,
+      "title": "Deep Learning–based Bone Mineral Density Prediction Using Pediatric Chest Radiographs: A Multicenter Feasibility Study",
+      "journal": "Radiology",
+      "type": "journal-article",
+      "date": {
+        "year": "2026",
+        "month": "04",
+        "day": "01"
+      },
+      "contributors": [
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Young Jin Ryu",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jung-Eun Cheon",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Young Hun Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae-Yeon Hwang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Seunghyun Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yeon Jin Cho",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Seok Young Koh",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yun Jeong Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Young Ah Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Choong Ho Shin",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.1148/radiol.252761",
+          "url": "https://doi.org/10.1148/radiol.252761"
+        }
+      },
+      "url": "https://doi.org/10.1148/radiol.252761",
+      "source": "Crossref"
+    },
+    {
+      "put_code": 203817701,
+      "title": "Advances in automated fetal brain MRI segmentation and biometry: Insights from the FeTA 2024 challenge",
+      "journal": "Medical Image Analysis",
+      "type": "journal-article",
+      "date": {
+        "year": "2026",
+        "month": "03",
+        "day": ""
+      },
+      "contributors": [
+        {
+          "name": "Vladyslav Zalevskyi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Thomas Sanchez",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Misha Kaandorp",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Margaux Roulet",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Diego Fajardo-Rojas",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Liu Li",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jana Hutter",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Hongwei Bran Li",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Matthew J. Barkovich",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Hui Ji",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Luca Wilhelmi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Aline Dändliker",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Céline Steger",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Mériam Koob",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yvan Gomez",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Anton Jakovčić",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Melita Klaić",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Ana Adžić",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Pavel Marković",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Gracia Grabarić",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Milan Rados",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jordina Aviles Verdera",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Gregor Kasprian",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Gregor Dovjak",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Raphael Gaubert-Rachmühl",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Maurice Aschwanden",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Qi Zeng",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Davood Karimi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Denis Peruzzo",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Tommaso Ciceri",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Giorgio Longari",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Rachika E. Hamadache",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Amina Bouzid",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Xavier Lladó",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Simone Chiarella",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Gerard Martí-Juan",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Miguel Ángel González Ballester",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Marco Castellaro",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Marco Pinamonti",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Valentina Visani",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Robin Cremese",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Keïn Sam",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Fleur Gaudfernau",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Param Ahir",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Mehul Parikh",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Maximilian Zenk",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Michael Baumgartner",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Klaus Maier-Hein",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Li Tianhong",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yang Hong",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Zhao Longfei",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.1016/j.media.2026.103941",
+          "url": "https://doi.org/10.1016/j.media.2026.103941"
+        },
+        "issn": {
+          "value": "1361-8415",
+          "url": "https://portal.issn.org/resource/ISSN/1361-8415"
+        }
+      },
+      "url": "https://doi.org/10.1016/j.media.2026.103941",
+      "source": "Jae Won Choi"
+    },
+    {
+      "put_code": 196650255,
+      "title": "Development and validation of a deep learning-based algorithm for quantifying bronchiolitis obliterans in paediatric computed tomography",
+      "journal": "British Journal of Radiology",
+      "type": "journal-article",
+      "date": {
+        "year": "2026",
+        "month": "02",
+        "day": "01"
+      },
+      "contributors": [
+        {
+          "name": "Chanyoung Rhee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae-Yeon Hwang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Ji Young Ha",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yeon Jin Cho",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Seunghyun Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jung-Eun Cheon",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Dong In Suh",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Young Hun Choi",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.1093/bjr/tqaf268",
+          "url": "https://doi.org/10.1093/bjr/tqaf268"
+        }
+      },
+      "url": "https://doi.org/10.1093/bjr/tqaf268",
+      "source": "Crossref"
+    },
+    {
+      "put_code": 198104593,
+      "title": "Deep learning-enhanced zero echo time silent brain magnetic resonance imaging in infants without sedation",
+      "journal": "Pediatric Radiology",
+      "type": "journal-article",
+      "date": {
+        "year": "2025",
+        "month": "11",
+        "day": "12"
+      },
+      "contributors": [
+        {
+          "name": "Chanyoung Rhee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae-Yeon Hwang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yeon Jin Cho",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Seunghyun Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jung-Eun Cheon",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Young Hun Choi",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.1007/s00247-025-06413-0",
+          "url": "https://doi.org/10.1007/s00247-025-06413-0"
+        },
+        "issn": {
+          "value": "1432-1998",
+          "url": "https://portal.issn.org/resource/ISSN/1432-1998"
+        }
+      },
+      "url": "https://doi.org/10.1007/s00247-025-06413-0",
+      "source": "Jae Won Choi"
+    },
+    {
+      "put_code": 198104586,
+      "title": "Evaluating Glenoid Bone Loss Location Using Best Fit and Outer Circles: Are We Pointing in the Same Direction?",
+      "journal": "Orthopaedic Journal of Sports Medicine",
+      "type": "journal-article",
+      "date": {
+        "year": "2025",
+        "month": "11",
+        "day": ""
+      },
+      "contributors": [
+        {
+          "name": "Woo-Sung Do",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Tae-Hwan Yoon",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Joon-Ryul Lim",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yun-Rak Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yong-Min Chun",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.1177/23259671251387351",
+          "url": "https://doi.org/10.1177/23259671251387351"
+        },
+        "issn": {
+          "value": "2325-9671",
+          "url": "https://portal.issn.org/resource/ISSN/2325-9671"
+        }
+      },
+      "url": "https://doi.org/10.1177/23259671251387351",
+      "source": "Jae Won Choi"
+    },
+    {
+      "put_code": 187849873,
+      "title": "Accelerated brain magnetic resonance imaging with deep learning reconstruction: a comparative study on image quality in pediatric neuroimaging",
+      "journal": "Pediatric Radiology",
+      "type": "journal-article",
+      "date": {
+        "year": "2025",
+        "month": "07",
+        "day": "12"
+      },
+      "contributors": [
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yeon Jin Cho",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Seul Bi Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Seunghyun Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae-Yeon Hwang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Young Hun Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jung-Eun Cheon",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Joonsung Lee",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.1007/s00247-025-06314-2",
+          "url": "https://doi.org/10.1007/s00247-025-06314-2"
+        },
+        "issn": {
+          "value": "1432-1998",
+          "url": "https://portal.issn.org/resource/ISSN/1432-1998"
+        }
+      },
+      "url": "https://doi.org/10.1007/s00247-025-06314-2",
+      "source": "Jae Won Choi"
+    },
+    {
+      "put_code": 182291718,
+      "title": "Retrospective Clinical Trial to Evaluate the Effectiveness of a New Tanner–Whitehouse-Based Bone Age Assessment Algorithm Trained with a Deep Neural Network System",
+      "journal": "Diagnostics",
+      "type": "journal-article",
+      "date": {
+        "year": "2025",
+        "month": "04",
+        "day": "14"
+      },
+      "contributors": [
+        {
+          "name": "Meesun Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Young-Hun Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Seul-Bi Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae-Won Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Seunghyun Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae-Yeon Hwang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jung-Eun Cheon",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "SungHyuk Hong",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jeonghoon Kim",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yeon-Jin Cho",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.3390/diagnostics15080993",
+          "url": "https://doi.org/10.3390/diagnostics15080993"
+        }
+      },
+      "url": "https://doi.org/10.3390/diagnostics15080993",
+      "source": "Crossref"
+    },
+    {
+      "put_code": 174830443,
+      "title": "Ultrafast MRI for Pediatric Brain Assessment in Routine Clinical Practice",
+      "journal": "Korean Journal of Radiology",
+      "type": "journal-article",
+      "date": {
+        "year": "2025",
+        "month": "",
+        "day": ""
+      },
+      "contributors": [
+        {
+          "name": "Hee Eun Moon",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Ji Young Ha",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Seung Hyun Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae-Yeon Hwang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Young Hun Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jung-Eun Cheon",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yeon Jin Cho",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.3348/kjr.2024.0725",
+          "url": "https://doi.org/10.3348/kjr.2024.0725"
+        }
+      },
+      "url": "https://doi.org/10.3348/kjr.2024.0725",
+      "source": "Crossref"
+    },
+    {
+      "put_code": 165131293,
+      "title": "A novel deep learning model for obstructive sleep apnea diagnosis: hybrid CNN-Transformer approach for radar-based detection of apnea-hypopnea events",
+      "journal": "SLEEP",
+      "type": "journal-article",
+      "date": {
+        "year": "2024",
+        "month": "12",
+        "day": "11"
+      },
+      "contributors": [
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Dae Lim Koo",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Dong Hyun Kim",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Hyunwoo Nam",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Ji Hyun Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Seung-No Hong",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Baekhyun Kim",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.1093/sleep/zsae184",
+          "url": "https://doi.org/10.1093/sleep/zsae184"
+        }
+      },
+      "url": "https://doi.org/10.1093/sleep/zsae184",
+      "source": "Crossref"
+    },
+    {
+      "put_code": 172912347,
+      "title": "Enhancing Radiomics Reproducibility: Deep Learning-Based Harmonization of Abdominal Computed Tomography (CT) Images",
+      "journal": "Bioengineering",
+      "type": "journal-article",
+      "date": {
+        "year": "2024",
+        "month": "11",
+        "day": "30"
+      },
+      "contributors": [
+        {
+          "name": "Seul Bi Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Youngtaek Hong",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yeon Jin Cho",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Dawun Jeong",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jina Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae Yeon Hwang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Seunghyun Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Young Hun Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jung-Eun Cheon",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.3390/bioengineering11121212",
+          "url": "https://doi.org/10.3390/bioengineering11121212"
+        }
+      },
+      "url": "https://doi.org/10.3390/bioengineering11121212",
+      "source": "Crossref"
+    },
+    {
+      "put_code": 176646179,
+      "title": "Unleashing the strengths of unlabelled data in deep learning-assisted pan-cancer abdominal organ quantification: the FLARE22 challenge",
+      "journal": "The Lancet Digital Health",
+      "type": "journal-article",
+      "date": {
+        "year": "2024",
+        "month": "11",
+        "day": ""
+      },
+      "contributors": [
+        {
+          "name": "Jun Ma",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yao Zhang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Song Gu",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Cheng Ge",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Shihao Mae",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Adamo Young",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Cheng Zhu",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Xin Yang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Kangkang Meng",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Ziyan Huang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Fan Zhang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yuanke Pan",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Shoujin Huang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jiacheng Wang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Mingze Sun",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Rongguo Zhang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Dengqiang Jia",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Natália Alves",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Bram de Wilde",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Gregor Koehler",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Haoran Lai",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Ershuai Wang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Manuel Wiesenfarth",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Qiongjie Zhu",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Guoqiang Dong",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jian He",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Junjun He",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Hua Yang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Bingding Huang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Mengye Lyu",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yongkang Ma",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Heng Guo",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Weixin Xu",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Klaus Maier-Hein",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yajun Wu",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Bo Wang",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.1016/s2589-7500(24)00154-7",
+          "url": "https://doi.org/10.1016/s2589-7500(24)00154-7"
+        },
+        "issn": {
+          "value": "2589-7500",
+          "url": "https://portal.issn.org/resource/ISSN/2589-7500"
+        }
+      },
+      "url": "https://doi.org/10.1016/s2589-7500(24)00154-7",
+      "source": "Jae Won Choi"
+    },
+    {
+      "put_code": 180319583,
+      "title": "Enhancing gadoxetic acid–enhanced liver MRI: a synergistic approach with deep learning CAIPIRINHA-VIBE and optimized fat suppression techniques",
+      "journal": "European Radiology",
+      "type": "journal-article",
+      "date": {
+        "year": "2024",
+        "month": "03",
+        "day": "16"
+      },
+      "contributors": [
+        {
+          "name": "Hong Wei",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jeong Hee Yoon",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Sun Kyung Jeon",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jihyuk Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae Hyun Kim",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Marcel Dominik Nickel",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Bin Song",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Ting Duan",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jeong Min Lee",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.1007/s00330-024-10693-9",
+          "url": "https://doi.org/10.1007/s00330-024-10693-9"
+        },
+        "issn": {
+          "value": "1432-1084",
+          "url": "https://portal.issn.org/resource/ISSN/1432-1084"
+        }
+      },
+      "url": "https://doi.org/10.1007/s00330-024-10693-9",
+      "source": "Jae Won Choi"
+    },
+    {
+      "put_code": 175388836,
+      "title": "Diagnostic Value of Zero Echo Time Magnetic Resonance Imaging for Pediatric Osseous Pathologies",
+      "journal": "Investigative Magnetic Resonance Imaging",
+      "type": "journal-article",
+      "date": {
+        "year": "2024",
+        "month": "",
+        "day": ""
+      },
+      "contributors": [
+        {
+          "name": "Soojin Kim",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Young Hun Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yeon Jin Cho",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Seunghyun Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae Yeon Hwang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jung-Eun Cheon",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.13104/imri.2024.0017",
+          "url": "https://doi.org/10.13104/imri.2024.0017"
+        }
+      },
+      "url": "https://doi.org/10.13104/imri.2024.0017",
+      "source": "Crossref"
+    },
+    {
+      "put_code": 143772822,
+      "title": "Developing a deep learning model for sleep stage prediction in obstructive sleep apnea cohort using 60 GHz frequency‐modulated continuous‐wave radar",
+      "journal": "Journal of Sleep Research",
+      "type": "journal-article",
+      "date": {
+        "year": "2023",
+        "month": "09",
+        "day": "26"
+      },
+      "contributors": [
+        {
+          "name": "LEE Ji hyun",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Hyunwoo Nam",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Dong Hyun Kim",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Dae Lim Koo",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Seung‐No Hong",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Eun‐Tae Jeon",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Sungmook Lim",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Gwang soo Jang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Baek‐hyun Kim",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.1111/jsr.14050",
+          "url": "https://doi.org/10.1111/jsr.14050"
+        },
+        "issn": {
+          "value": "1365-2869",
+          "url": "https://portal.issn.org/resource/ISSN/1365-2869"
+        }
+      },
+      "url": "https://doi.org/10.1111/jsr.14050",
+      "source": "Jae Won Choi"
+    },
+    {
+      "put_code": 142327674,
+      "title": "Deep learning-based iodine contrast-augmenting algorithm for low-contrast-dose liver CT to assess hypovascular hepatic metastasis",
+      "journal": "Abdominal Radiology",
+      "type": "journal-article",
+      "date": {
+        "year": "2023",
+        "month": "09",
+        "day": "14"
+      },
+      "contributors": [
+        {
+          "name": "Taehee Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jeong Hee Yoon",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jin Young Park",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jihyuk Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Chulkyun Ahn",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jeong Min Lee",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.1007/s00261-023-04039-0",
+          "url": "https://doi.org/10.1007/s00261-023-04039-0"
+        }
+      },
+      "url": "https://doi.org/10.1007/s00261-023-04039-0",
+      "source": "Crossref"
+    },
+    {
+      "put_code": 184445491,
+      "title": "Ensemble deep learning model for predicting anterior cruciate ligament tear from lateral knee radiograph",
+      "journal": "Skeletal Radiology",
+      "type": "journal-article",
+      "date": {
+        "year": "2022",
+        "month": "12",
+        "day": ""
+      },
+      "contributors": [
+        {
+          "name": "Dong Hyun Kim",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jee Won Chai",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Ji Hee Kang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Ji Hyun Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Hyo Jin Kim",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jiwoon Seo",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.1007/s00256-022-04081-x",
+          "url": "https://doi.org/10.1007/s00256-022-04081-x"
+        },
+        "issn": {
+          "value": "1432-2161",
+          "url": "https://portal.issn.org/resource/ISSN/1432-2161"
+        }
+      },
+      "url": "https://doi.org/10.1007/s00256-022-04081-x",
+      "source": "Jae Won Choi"
+    },
+    {
+      "put_code": 119527230,
+      "title": "Automated Detection of Sleep Apnea-Hypopnea Events Based on 60 GHz Frequency-Modulated Continuous-Wave Radar Using Convolutional Recurrent Neural Networks: A Preliminary Report of a Prospective Cohort Study",
+      "journal": "Sensors",
+      "type": "journal-article",
+      "date": {
+        "year": "2022",
+        "month": "09",
+        "day": "21"
+      },
+      "contributors": [
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Dong Hyun Kim",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Dae Lim Koo",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yangmi Park",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Hyunwoo Nam",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Ji Hyun Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Hyo Jin Kim",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Seung-No Hong",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Gwangsoo Jang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Sungmook Lim",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Baekhyun Kim",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.3390/s22197177",
+          "url": "https://doi.org/10.3390/s22197177"
+        }
+      },
+      "url": "https://doi.org/10.3390/s22197177",
+      "source": "Crossref"
+    },
+    {
+      "put_code": 119626603,
+      "title": "CrossMoDA 2021 challenge: Benchmark of cross-modality domain adaptation techniques for vestibular schwannoma and cochlea segmentation",
+      "journal": "Medical Image Analysis",
+      "type": "journal-article",
+      "date": {
+        "year": "2022",
+        "month": "09",
+        "day": ""
+      },
+      "contributors": [
+        {
+          "name": "Jae Won Choi",
+          "role": "",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.1016/j.media.2022.102628",
+          "url": "https://doi.org/10.1016/j.media.2022.102628"
+        },
+        "issn": {
+          "value": "1361-8415",
+          "url": "https://portal.issn.org/resource/ISSN/1361-8415"
+        }
+      },
+      "url": "https://doi.org/10.1016/j.media.2022.102628",
+      "source": "Jae Won Choi"
+    },
+    {
+      "put_code": 115832588,
+      "title": "Using Out-of-the-Box Frameworks for Contrastive Unpaired Image Translation for Vestibular Schwannoma and Cochlea Segmentation: An Approach for the CrossMoDA Challenge",
+      "journal": "",
+      "type": "book-chapter",
+      "date": {
+        "year": "2022",
+        "month": "",
+        "day": ""
+      },
+      "contributors": [
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.1007/978-3-031-09002-8_44",
+          "url": "https://doi.org/10.1007/978-3-031-09002-8_44"
+        }
+      },
+      "url": "https://doi.org/10.1007/978-3-031-09002-8_44",
+      "source": "Crossref"
+    },
+    {
+      "put_code": 127008952,
+      "title": "Knowledge Distillation from Cross Teaching Teachers for Efficient Semi-supervised Abdominal Organ Segmentation in CT",
+      "journal": "",
+      "type": "book-chapter",
+      "date": {
+        "year": "2022",
+        "month": "",
+        "day": ""
+      },
+      "contributors": [
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.1007/978-3-031-23911-3_10",
+          "url": "https://doi.org/10.1007/978-3-031-23911-3_10"
+        }
+      },
+      "url": "https://doi.org/10.1007/978-3-031-23911-3_10",
+      "source": "Crossref"
+    },
+    {
+      "put_code": 106209842,
+      "title": "Deep Learning-Assisted Diagnosis of Pediatric Skull Fractures on Plain Radiographs",
+      "journal": "Korean Journal of Radiology",
+      "type": "journal-article",
+      "date": {
+        "year": "2022",
+        "month": "",
+        "day": ""
+      },
+      "contributors": [
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yeon Jin Cho",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Ji Young Ha",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yun Young Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Seok Young Koh",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "June Young Seo",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Young Hun Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jung-Eun Cheon",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Ji Hoon Phi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Injoon Kim",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jaekwang Yang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Woo Sun Kim",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.3348/kjr.2021.0449",
+          "url": "https://doi.org/10.3348/kjr.2021.0449"
+        }
+      },
+      "url": "https://doi.org/10.3348/kjr.2021.0449",
+      "source": "Crossref"
+    },
+    {
+      "put_code": 102174356,
+      "title": "Generating synthetic contrast enhancement from non-contrast chest computed tomography using a generative adversarial network",
+      "journal": "Scientific Reports",
+      "type": "journal-article",
+      "date": {
+        "year": "2021",
+        "month": "10",
+        "day": "21"
+      },
+      "contributors": [],
+      "external_ids": {
+        "doi": {
+          "value": "10.1038/s41598-021-00058-3",
+          "url": "https://doi.org/10.1038/s41598-021-00058-3"
+        },
+        "issn": {
+          "value": "2045-2322",
+          "url": "https://portal.issn.org/resource/ISSN/2045-2322"
+        }
+      },
+      "url": "https://doi.org/10.1038/s41598-021-00058-3",
+      "source": "Jae Won Choi"
+    },
+    {
+      "put_code": 77735109,
+      "title": "Radiofrequency Ablation Using a Separable Clustered Electrode for the Treatment of Hepatocellular Carcinomas: A Randomized Controlled Trial of a Dual-Switching Monopolar Mode Versus a Single-Switching Monopolar Mode",
+      "journal": "Korean Journal of Radiology",
+      "type": "journal-article",
+      "date": {
+        "year": "2021",
+        "month": "",
+        "day": ""
+      },
+      "contributors": [
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jeong Min Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Dong Ho Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jung-Hwan Yoon",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yoon Jun Kim",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jeong-Hoon Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Su Jong Yu",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Eun Ju Cho",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.3348/kjr.2020.0134",
+          "url": "https://doi.org/10.3348/kjr.2020.0134"
+        }
+      },
+      "url": "https://doi.org/10.3348/kjr.2020.0134",
+      "source": "Crossref"
+    },
+    {
+      "put_code": 101082711,
+      "title": "No-Touch vs. Conventional Radiofrequency Ablation Using Twin Internally Cooled Wet Electrodes for Small Hepatocellular Carcinomas: A Randomized Prospective Comparative Study",
+      "journal": "Korean Journal of Radiology",
+      "type": "journal-article",
+      "date": {
+        "year": "2021",
+        "month": "",
+        "day": ""
+      },
+      "contributors": [
+        {
+          "name": "Yun Seok Suh",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jeong Hee Yoon",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Dong Ho Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yoon Jun Kim",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jeong Hoon Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Su Jong Yu",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Eun Ju Cho",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jung Hwan Yoon",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jeong Min Lee",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.3348/kjr.2021.0319",
+          "url": "https://doi.org/10.3348/kjr.2021.0319"
+        }
+      },
+      "url": "https://doi.org/10.3348/kjr.2021.0319",
+      "source": "Crossref"
+    },
+    {
+      "put_code": 81063378,
+      "title": "Radiofrequency ablation using internally cooled wet electrodes in bipolar mode for the treatment of recurrent hepatocellular carcinoma after locoregional treatment: A randomized prospective comparative study",
+      "journal": "PLOS ONE",
+      "type": "journal-article",
+      "date": {
+        "year": "2020",
+        "month": "09",
+        "day": "28"
+      },
+      "contributors": [
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Do Young Kim",
+          "role": "editor",
+          "sequence": ""
+        },
+        {
+          "name": "Jeong Min Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Dong Ho Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jung-Hwan Yoon",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yoon Jun Kim",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jeong-Hoon Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Su Jong Yu",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Eun Ju Cho",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.1371/journal.pone.0239733",
+          "url": "https://doi.org/10.1371/journal.pone.0239733"
+        }
+      },
+      "url": "https://doi.org/10.1371/journal.pone.0239733",
+      "source": "Crossref"
+    },
+    {
+      "put_code": 81162880,
+      "title": "Using a Dual-Input Convolutional Neural Network for Automated Detection of Pediatric Supracondylar Fracture on Conventional Radiography",
+      "journal": "Investigative Radiology",
+      "type": "journal-article",
+      "date": {
+        "year": "2020",
+        "month": "02",
+        "day": ""
+      },
+      "contributors": [],
+      "external_ids": {
+        "doi": {
+          "value": "10.1097/rli.0000000000000615",
+          "url": "https://doi.org/10.1097/rli.0000000000000615"
+        },
+        "issn": {
+          "value": "0020-9996",
+          "url": "https://portal.issn.org/resource/ISSN/0020-9996"
+        }
+      },
+      "url": "https://doi.org/10.1097/rli.0000000000000615",
+      "source": "Jae Won Choi"
+    }
+  ],
+  "affiliations": {
+    "employment": [
+      {
+        "organization": "Seoul National University Hospital",
+        "role": "Clinical Assistant Professor",
+        "department": "Radiology",
+        "start": "2025-03-01",
+        "end": ""
+      },
+      {
+        "organization": "Seoul National University Hospital",
+        "role": "Fellow",
+        "department": "Radiology",
+        "start": "2024-05-01",
+        "end": "2025-02-28"
+      },
+      {
+        "organization": "Armed Forces Yangju Hospital",
+        "role": "",
+        "department": "Radiology",
+        "start": "2021-04-23",
+        "end": "2024-04-26"
+      },
+      {
+        "organization": "Seoul National University Hospital",
+        "role": "Residency",
+        "department": "Radiology",
+        "start": "2017-03-01",
+        "end": "2021-02-28"
+      },
+      {
+        "organization": "Seoul National University Hospital",
+        "role": "Internship",
+        "department": "",
+        "start": "2016-03-01",
+        "end": "2017-02-28"
+      }
+    ],
+    "education": [
+      {
+        "organization": "Seoul National University",
+        "role": "MS",
+        "department": "Medicine",
+        "start": "2018-03-01",
+        "end": "2020-02-28"
+      },
+      {
+        "organization": "Seoul National University",
+        "role": "MD",
+        "department": "",
+        "start": "2012-03-01",
+        "end": "2016-02-28"
+      }
+    ],
+    "qualification": []
+  }
+}
