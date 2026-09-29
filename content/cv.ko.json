@@ -100,7 +100,16 @@
       "detail": ""
     }
   ],
-  "licenses": [],
+  "licenses": [
+    {
+      "title": "영상의학과 전문의",
+      "period": "2021.02 – 현재"
+    },
+    {
+      "title": "의사 면허",
+      "period": "2016.01 – 현재"
+    }
+  ],
   "projects": [],
   "awards": [
     {

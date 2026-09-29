@@ -100,7 +100,16 @@
       "detail": ""
     }
   ],
-  "licenses": [],
+  "licenses": [
+    {
+      "title": "Board Certification in Radiology (Korea)",
+      "period": "Feb 2021 – Present"
+    },
+    {
+      "title": "Medical License (Korea)",
+      "period": "Jan 2016 – Present"
+    }
+  ],
   "projects": [],
   "awards": [
     {
