@@ -100,4 +100,4 @@ dist/                    로컬 빌드 결과(저장소에는 올리지 않음)
 
 이 프로젝트는 [오이철(Richul Oh)](https://github.com/richuloh) 선생님의 [richuloh/cv](https://github.com/richuloh/cv)를 바탕으로 만들었습니다. ORCID 자동 동기화, 한·영 정적 사이트 생성, PDF 렌더링, 로컬 CV 편집기, GitHub Actions 배포 구성은 모두 원 저장소의 설계와 코드에서 비롯되었습니다. 훌륭한 작업을 공개해 주셔서 감사드립니다.
 
-This site is built on [richuloh/cv](https://github.com/richuloh/cv) by [Richul Oh](https://github.com/richuloh). The ORCID sync, bilingual static-site generator, PDF rendering, local CV editor, and GitHub Actions deployment all come from his original work. Many thanks for sharing it.
+This site is built on [richuloh/cv](https://github.com/richuloh/cv) by [Richul Oh](https://github.com/richuloh). The ORCID sync, bilingual static-site generator, PDF rendering, local CV editor, and GitHub Actions deployment all come from the original repository. Many thanks for sharing it.
