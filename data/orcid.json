@@ -7,8 +7,8 @@
     "family": "Choi",
     "credit": ""
   },
-  "last_synced_utc": "2026-09-29T04:06:10Z",
-  "record_last_modified_utc": "2026-04-08T15:06:09.458000Z",
+  "last_synced_utc": "2026-09-30T19:29:44Z",
+  "record_last_modified_utc": "2026-09-29T09:17:58.819000Z",
   "works": [
     {
       "put_code": 210951558,
@@ -430,6 +430,62 @@
         }
       },
       "url": "https://doi.org/10.1093/bjr/tqaf268",
+      "source": "Crossref"
+    },
+    {
+      "put_code": 228146217,
+      "title": "Diffusion-Weighted Imaging With Deep Learning Reconstruction in the Pediatric Brain: Comparison With Multi-Shot Diffusion-Weighted Imaging",
+      "journal": "Investigative Magnetic Resonance Imaging",
+      "type": "journal-article",
+      "date": {
+        "year": "2026",
+        "month": "",
+        "day": ""
+      },
+      "contributors": [
+        {
+          "name": "Ha Young Yang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae-Yeon Hwang",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jae Won Choi",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Yeon Jin Cho",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Seunghyun Lee",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Jung-Eun Cheon",
+          "role": "author",
+          "sequence": ""
+        },
+        {
+          "name": "Young Hun Choi",
+          "role": "author",
+          "sequence": ""
+        }
+      ],
+      "external_ids": {
+        "doi": {
+          "value": "10.13104/imri.2026.0018",
+          "url": "https://doi.org/10.13104/imri.2026.0018"
+        }
+      },
+      "url": "https://doi.org/10.13104/imri.2026.0018",
       "source": "Crossref"
     },
     {
