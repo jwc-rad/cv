@@ -1,10 +1,13 @@
 import json
+import os
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.build_site import build_page, build_summary_page, select_summary_works
+from scripts.build_site import build_page, build_summary_page, select_summary_works, summary_author_markup
 from scripts.check_output import check_pdf
+from scripts.render_pdfs import find_browser
 
 
 class SummaryPublicationSelectionTests(unittest.TestCase):
@@ -113,6 +116,47 @@ class SummaryPageTests(unittest.TestCase):
         self.assertIn("One-page CV", english_html)
         self.assertNotIn("jae-won-choi-cv-summary-en.pdf", korean_html)
 
+    def test_corresponding_author_citation_uses_actual_first_author(self):
+        work = {
+            "contributors": [{"name": "Another Author"}, {"name": "Jae Won Choi"}],
+        }
+
+        self.assertEqual(summary_author_markup(work), "Another Author, et al.")
+
+    def test_mobile_download_links_span_the_profile_grid(self):
+        root = Path(__file__).resolve().parents[1]
+        browser = find_browser(os.environ.get("CHROME_PATH"))
+        stylesheet = (root / "assets" / "site.css").resolve().as_uri()
+        document = f"""<!doctype html>
+<html><head><meta name="viewport" content="width=device-width"><link rel="stylesheet" href="{stylesheet}"></head>
+<body><aside class="author-profile"><div class="cv-downloads"><a class="cv-link">Full CV</a><a class="cv-link">One-page CV</a></div></aside>
+<script>window.addEventListener("load", () => {{
+  const style = getComputedStyle(document.querySelector(".cv-downloads"));
+  document.documentElement.dataset.grid = `${{style.gridColumnStart}}/${{style.gridColumnEnd}}`;
+}});</script></body></html>"""
+
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            source = Path(temporary_directory) / "mobile.html"
+            source.write_text(document, encoding="utf-8")
+            completed = subprocess.run(
+                [
+                    str(browser),
+                    "--headless=new",
+                    "--disable-gpu",
+                    "--no-sandbox",
+                    "--allow-file-access-from-files",
+                    "--window-size=390,800",
+                    "--dump-dom",
+                    source.resolve().as_uri(),
+                ],
+                capture_output=True,
+                text=True,
+                timeout=30,
+            )
+
+        self.assertEqual(completed.returncode, 0, completed.stderr)
+        self.assertIn('data-grid="1/-1"', completed.stdout)
+
 
 class SummaryPdfValidationTests(unittest.TestCase):
     def test_rejects_summary_pdf_with_more_than_one_page(self):
@@ -122,6 +166,14 @@ class SummaryPdfValidationTests(unittest.TestCase):
 
             with self.assertRaisesRegex(AssertionError, "Expected 1 PDF page, found 2"):
                 check_pdf(path, expected_pages=1)
+
+    def test_rejects_summary_pdf_that_is_not_a4_portrait(self):
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            path = Path(temporary_directory) / "summary.pdf"
+            path.write_bytes(b"%PDF" + b"x" * 5_000 + b"/Type /Page /MediaBox [0 0 612 792]")
+
+            with self.assertRaisesRegex(AssertionError, "Expected A4 portrait PDF page"):
+                check_pdf(path, expected_pages=1, expected_page_size="A4")
 
 
 if __name__ == "__main__":

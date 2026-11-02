@@ -115,6 +115,16 @@ def select_summary_works(
     return selected
 
 
+def summary_author_markup(work: dict[str, Any]) -> str:
+    contributors = work.get("contributors") or []
+    if not contributors:
+        return "<strong>Choi JW</strong>, et al."
+    first_author = str(contributors[0].get("name") or "").strip()
+    if normalize_name(first_author) in TARGET_NAME_VARIANTS:
+        return "<strong>Choi JW</strong>, et al."
+    return f"{e(first_author)}, et al."
+
+
 def build_summary_page(
     profile: dict[str, Any],
     cv: dict[str, Any],
@@ -158,7 +168,7 @@ def build_summary_page(
         venue = " · ".join(part for part in (str(work.get("journal") or ""), year) if part)
         publication_rows.append(
             '<li>'
-            '<span class="publication-authors"><strong>Choi JW</strong>, et al.</span> '
+            f'<span class="publication-authors">{summary_author_markup(work)}</span> '
             f'<span class="publication-title">{e(work.get("title"))}</span>'
             f'<div class="publication-meta">{e(venue)}{doi_html}</div>'
             '</li>'

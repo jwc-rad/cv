@@ -50,7 +50,9 @@ def check_html(path: Path, expected_lang: str) -> None:
         raise AssertionError(f"Broken local links in {path}: {missing}")
 
 
-def check_pdf(path: Path, expected_pages: int | None = None) -> int:
+def check_pdf(
+    path: Path, expected_pages: int | None = None, expected_page_size: str | None = None
+) -> int:
     data = path.read_bytes()
     if len(data) < 5_000 or not data.startswith(b"%PDF"):
         raise AssertionError(f"Invalid PDF: {path}")
@@ -59,6 +61,21 @@ def check_pdf(path: Path, expected_pages: int | None = None) -> int:
         raise AssertionError(f"Could not find PDF pages in {path}")
     if expected_pages is not None and pages != expected_pages:
         raise AssertionError(f"Expected {expected_pages} PDF page, found {pages}: {path}")
+    if expected_page_size is not None:
+        if expected_page_size != "A4":
+            raise ValueError(f"Unsupported expected PDF page size: {expected_page_size}")
+        media_boxes = re.findall(rb"/MediaBox\s*\[\s*([^\]]+)\]", data)
+        if not media_boxes:
+            raise AssertionError(f"Could not find PDF page dimensions in {path}")
+        coordinates = [float(value) for value in media_boxes[0].split()]
+        if len(coordinates) != 4:
+            raise AssertionError(f"Invalid PDF MediaBox in {path}")
+        width = abs(coordinates[2] - coordinates[0])
+        height = abs(coordinates[3] - coordinates[1])
+        if abs(width - 595.28) > 1.0 or abs(height - 841.89) > 1.0:
+            raise AssertionError(
+                f"Expected A4 portrait PDF page, found {width:.2f} × {height:.2f} points: {path}"
+            )
     return pages
 
 
@@ -67,7 +84,11 @@ def main() -> int:
     check_html(DIST / "en" / "index.html", "en")
     ko_pages = check_pdf(DIST / "downloads" / "jae-won-choi-cv-ko.pdf")
     en_pages = check_pdf(DIST / "downloads" / "jae-won-choi-cv-en.pdf")
-    summary_pages = check_pdf(DIST / "downloads" / "jae-won-choi-cv-summary-en.pdf", expected_pages=1)
+    summary_pages = check_pdf(
+        DIST / "downloads" / "jae-won-choi-cv-summary-en.pdf",
+        expected_pages=1,
+        expected_page_size="A4",
+    )
     print(
         "Output checks passed: "
         f"Korean PDF {ko_pages} pages, English PDF {en_pages} pages, English summary PDF {summary_pages} page"

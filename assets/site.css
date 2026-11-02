@@ -613,7 +613,7 @@ html[lang="en"] .disclosure-trigger[aria-expanded="true"]::after { content: "Clo
   .author-name-secondary { margin-bottom: 9px; }
   .author-role, .author-affiliation, .author-tagline { font-size: 14px; }
   .author-tagline { margin-top: 8px; }
-  .author-contact, .cv-link { grid-column: 1 / -1; }
+  .author-contact, .cv-downloads { grid-column: 1 / -1; }
   .author-contact { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 18px; margin-top: 22px; }
 
   .intro-section { min-height: 0; padding: 38px 0 42px; }
