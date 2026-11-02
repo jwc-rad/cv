@@ -247,7 +247,7 @@ def serve(port: int, token: str, open_browser: bool) -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Run the local CV form editor")
-    parser.add_argument("--port", type=int, default=8765)
+    parser.add_argument("--port", type=int, default=8886)
     parser.add_argument("--no-browser", action="store_true")
     parser.add_argument("--token", help=argparse.SUPPRESS)
     args = parser.parse_args()
