@@ -28,7 +28,10 @@ PREVIEW = ROOT / "preview"
 
 TARGET_NAME_VARIANTS = {"jae won choi", "jaewon choi", "jae-won choi", "choi jae won", "choi jaewon", "choi jae-won", "jw choi", "j w choi", "choi jw", "choi j w"}
 PDF_SLUG = "jae-won-choi-cv"
-SUMMARY_PDF_NAME = "jae-won-choi-cv-summary-en.pdf"
+SUMMARY_PDF_NAMES = {
+    "ko": "jae-won-choi-cv-summary-ko.pdf",
+    "en": "jae-won-choi-cv-summary-en.pdf",
+}
 BRAND = "Jae Won Choi"
 
 
@@ -132,12 +135,27 @@ def build_summary_page(
     overrides: dict[str, Any],
     summary_config: dict[str, Any],
 ) -> str:
+    lang = str(cv.get("lang") or "en")
+    is_ko = lang == "ko"
+    labels = {
+        "title": "1페이지 CV" if is_ko else "One-page CV",
+        "interests": "연구 분야" if is_ko else "Research interests",
+        "experience": "경력" if is_ko else "Appointments & Training",
+        "education": "학력" if is_ko else "Education",
+        "licenses": "자격 및 면허" if is_ko else "Certification & Licensure",
+        "publications": "주요 논문" if is_ko else "Selected Publications",
+    }
     selected_works = select_summary_works(
         orcid.get("works") or [], overrides, summary_config.get("selected_publication_put_codes") or []
     )
     experience_limit = int(summary_config.get("experience_limit") or 0)
     experience = cv.get("experience", [])[:experience_limit]
     generated = build_date()
+    generated_text = (
+        f"{generated.year}년 {generated.month}월 {generated.day}일 생성"
+        if is_ko
+        else f"Generated {generated.day} {generated.strftime('%B %Y')}"
+    )
 
     def compact_items(items: list[dict[str, str]]) -> str:
         rows = []
@@ -180,14 +198,14 @@ def build_summary_page(
     focus = " · ".join(e(item) for item in cv.get("focus", []))
 
     return f"""<!doctype html>
-<html lang="en">
+<html lang="{lang}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{e(cv.get('name'))} — One-page CV</title>
+  <title>{e(cv.get('name'))} — {e(labels['title'])}</title>
   <link rel="stylesheet" href="../assets/summary.css">
 </head>
-<body>
+<body class="lang-{lang}">
   <main class="summary-page">
     <header class="summary-header">
       <h1>{e(cv.get('name'))}</h1>
@@ -202,30 +220,30 @@ def build_summary_page(
 
     <section class="summary-intro">
       <p class="bio">{e(cv.get('bio'))}</p>
-      <p class="interests"><strong>Research interests:</strong> {focus}</p>
+      <p class="interests"><strong>{e(labels['interests'])}:</strong> {focus}</p>
     </section>
 
     <div class="summary-columns">
       <section class="summary-section">
-        <h2>Appointments &amp; Training</h2>
+        <h2>{e(labels['experience'])}</h2>
         {compact_items(experience)}
       </section>
       <section class="summary-section">
-        <h2>Education</h2>
+        <h2>{e(labels['education'])}</h2>
         {compact_items(cv.get('education', []))}
         <div class="summary-subsection">
-          <h2>Certification &amp; Licensure</h2>
+          <h2>{e(labels['licenses'])}</h2>
           {compact_items(cv.get('licenses', []))}
         </div>
       </section>
     </div>
 
     <section class="summary-section summary-publications">
-      <h2>Selected Publications</h2>
+      <h2>{e(labels['publications'])}</h2>
       <ol class="publication-list">{"".join(publication_rows)}</ol>
     </section>
 
-    <footer class="summary-footer">Generated {generated.day} {generated.strftime('%B %Y')}</footer>
+    <footer class="summary-footer">{e(generated_text)}</footer>
   </main>
 </body>
 </html>
@@ -355,7 +373,8 @@ def build_page(profile: dict[str, Any], cv: dict[str, Any], orcid: dict[str, Any
     generated = build_date()
     generated_iso = generated.strftime("%Y-%m-%d")
     pdf_download_name = pdf_name.replace(".pdf", f"-{generated_iso}.pdf")
-    summary_pdf_download_name = SUMMARY_PDF_NAME.replace(".pdf", f"-{generated_iso}.pdf")
+    summary_pdf_name = SUMMARY_PDF_NAMES[lang]
+    summary_pdf_download_name = summary_pdf_name.replace(".pdf", f"-{generated_iso}.pdf")
     generated_text = (
         f"작성일 {generated.year}년 {generated.month}월 {generated.day}일"
         if is_ko
@@ -365,9 +384,9 @@ def build_page(profile: dict[str, Any], cv: dict[str, Any], orcid: dict[str, Any
         f'<a href="mailto:{e(email)}">{e(email)}</a>' for email in profile["contact"].get("emails", [])
     )
     summary_download_link = (
-        f'<span aria-hidden="true"> · </span><a class="cv-link" href="{prefix}downloads/{SUMMARY_PDF_NAME}" '
+        f'<span aria-hidden="true"> · </span><a class="cv-link" href="{prefix}downloads/{summary_pdf_name}" '
         f'download="{e(summary_pdf_download_name)}">{e(labels["download_summary_pdf"])} ↓</a>'
-        if not is_ko
+        if labels.get("download_summary_pdf")
         else ""
     )
     research_label = "연구 분야" if is_ko else "Research interests"
@@ -551,6 +570,7 @@ def main() -> int:
         CONTENT / "cv.ko.json",
         CONTENT / "cv.en.json",
         CONTENT / "cv.summary.en.json",
+        CONTENT / "cv.summary.ko.json",
         DATA / "orcid.json",
     ]
     missing = [str(path.relative_to(ROOT)) for path in required if not path.exists()]
@@ -581,11 +601,15 @@ def main() -> int:
     ko = load_json(CONTENT / "cv.ko.json")
     en = load_json(CONTENT / "cv.en.json")
     summary_en = load_json(CONTENT / "cv.summary.en.json")
+    summary_ko = load_json(CONTENT / "cv.summary.ko.json")
     (DIST / "index.html").write_text(build_page(profile, ko, orcid, overrides), encoding="utf-8")
     (DIST / "en" / "index.html").write_text(build_page(profile, en, orcid, overrides), encoding="utf-8")
     PREVIEW.mkdir(parents=True, exist_ok=True)
     (PREVIEW / "summary-en.html").write_text(
         build_summary_page(profile, en, orcid, overrides, summary_en), encoding="utf-8"
+    )
+    (PREVIEW / "summary-ko.html").write_text(
+        build_summary_page(profile, ko, orcid, overrides, summary_ko), encoding="utf-8"
     )
     (DIST / ".nojekyll").write_text("", encoding="utf-8")
 
@@ -606,7 +630,7 @@ def main() -> int:
         )
         (DIST / "sitemap.xml").write_text(sitemap, encoding="utf-8")
     (DIST / "robots.txt").write_text("\n".join(robots_lines) + "\n", encoding="utf-8")
-    print(f"Built Korean and English pages in {DIST.relative_to(ROOT)} and English summary print source")
+    print(f"Built Korean and English pages in {DIST.relative_to(ROOT)} and bilingual summary print sources")
     return 0
 
 

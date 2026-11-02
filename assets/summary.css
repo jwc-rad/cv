@@ -13,6 +13,11 @@ body {
   print-color-adjust: exact;
 }
 
+body.lang-ko {
+  font-family: "Noto Sans KR", "Noto Sans CJK KR", "Malgun Gothic", Arial, sans-serif;
+  word-break: keep-all;
+}
+
 a { color: #245866; text-decoration: none; }
 .summary-page { width: 100%; }
 
@@ -29,6 +34,10 @@ a { color: #245866; text-decoration: none; }
   font-weight: 600;
   letter-spacing: -.02em;
   line-height: 1.05;
+}
+
+body.lang-ko .summary-header h1 {
+  font-family: "Noto Serif KR", "Noto Serif CJK KR", "Malgun Gothic", serif;
 }
 
 .summary-role { margin: 2mm 0 0; font-size: 10.2pt; font-weight: 700; }

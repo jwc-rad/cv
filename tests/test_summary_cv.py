@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import subprocess
 import tempfile
 import unittest
@@ -101,7 +102,7 @@ class SummaryPageTests(unittest.TestCase):
         self.assertNotIn("Excluded Award", html)
         self.assertNotIn("profile.png", html)
 
-    def test_full_site_links_summary_pdf_from_english_only(self):
+    def test_full_site_links_each_language_to_its_own_summary_pdf(self):
         root = Path(__file__).resolve().parents[1]
         profile = json.loads((root / "content" / "profile.json").read_text(encoding="utf-8"))
         orcid = json.loads((root / "data" / "orcid.json").read_text(encoding="utf-8"))
@@ -115,6 +116,33 @@ class SummaryPageTests(unittest.TestCase):
         self.assertIn("downloads/jae-won-choi-cv-summary-en.pdf", english_html)
         self.assertIn("One-page CV", english_html)
         self.assertNotIn("jae-won-choi-cv-summary-en.pdf", korean_html)
+        self.assertIn("downloads/jae-won-choi-cv-summary-ko.pdf", korean_html)
+        self.assertIn("1페이지 CV", korean_html)
+        self.assertNotIn("jae-won-choi-cv-summary-ko.pdf", english_html)
+
+    def test_korean_summary_localizes_cv_text_but_keeps_publication_titles_in_english(self):
+        root = Path(__file__).resolve().parents[1]
+        profile = json.loads((root / "content" / "profile.json").read_text(encoding="utf-8"))
+        orcid = json.loads((root / "data" / "orcid.json").read_text(encoding="utf-8"))
+        overrides = json.loads((root / "content" / "publication_overrides.json").read_text(encoding="utf-8"))
+        ko = json.loads((root / "content" / "cv.ko.json").read_text(encoding="utf-8"))
+        summary = json.loads((root / "content" / "cv.summary.en.json").read_text(encoding="utf-8"))
+
+        html = build_summary_page(profile, ko, orcid, overrides, summary)
+
+        self.assertIn('<html lang="ko">', html)
+        self.assertIn('<body class="lang-ko">', html)
+        self.assertIn("서울대학교병원 소아영상의학 진료교수입니다.", html)
+        self.assertIn("영상의학과 진료교수", html)
+        self.assertIn("경력", html)
+        self.assertIn("학력", html)
+        self.assertIn("자격 및 면허", html)
+        self.assertIn("주요 논문", html)
+        self.assertIn("연구 분야:", html)
+        self.assertIn("Deep Learning–based Bone Mineral Density Prediction", html)
+        self.assertNotIn("Appointments &amp; Training", html)
+        self.assertNotIn("Generated ", html)
+        self.assertRegex(html, re.compile(r"\d{4}년 \d{1,2}월 \d{1,2}일 생성"))
 
     def test_corresponding_author_citation_uses_actual_first_author(self):
         work = {
