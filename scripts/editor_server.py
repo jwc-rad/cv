@@ -34,7 +34,7 @@ DATA_DIR = ROOT / "data"
 BUILD_STEPS = [
     ("ORCID 공개 데이터 동기화", ROOT / "scripts" / "sync_orcid.py", False),
     ("한·영 웹페이지 생성", ROOT / "scripts" / "build_site.py", True),
-    ("한·영 PDF 생성", ROOT / "scripts" / "render_pdfs.py", True),
+    ("전체·영문 1페이지 PDF 생성", ROOT / "scripts" / "render_pdfs.py", True),
     ("결과 검증", ROOT / "scripts" / "check_output.py", True),
 ]
 

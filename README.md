@@ -27,6 +27,7 @@ python scripts/editor_server.py
 - 영문 페이지: `/en/index.html`
 - 한글 PDF: `/downloads/jae-won-choi-cv-ko.pdf`
 - 영문 PDF: `/downloads/jae-won-choi-cv-en.pdf`
+- 영문 1페이지 요약 PDF: `/downloads/jae-won-choi-cv-summary-en.pdf`
 - ORCID 공개 논문, 저자, 저널, DOI 자동 동기화
 - 매월 1일 오전 4시 23분(Asia/Seoul) 자동 빌드·배포
 - 수동 실행 및 `main` 브랜치 변경 시에도 즉시 재배포
@@ -54,6 +55,7 @@ Python 3.12 이상과 Chrome/Edge 중 하나가 필요합니다. 외부 Python �
 
 ```powershell
 python scripts/sync_orcid.py
+python -m unittest discover -s tests -v
 python scripts/build_site.py
 python scripts/render_pdfs.py
 python scripts/check_output.py
@@ -88,8 +90,9 @@ content/                 직접 수정하는 한·영 CV 원본
 data/orcid.json          자동 생성되는 ORCID 스냅샷
 scripts/sync_orcid.py    ORCID 동기화
 scripts/build_site.py    정적 사이트 생성
-scripts/render_pdfs.py   Chrome/Edge 기반 PDF 생성
+scripts/render_pdfs.py   Chrome/Edge 기반 전체·1페이지 요약 PDF 생성
 scripts/check_output.py  링크·PDF 무결성 검사
+tests/                   1페이지 요약 선택·출력 회귀 테스트
 .github/workflows/       월간 동기화와 Pages 배포
 editor/                  로컬 전용 브라우저 입력 화면
 .editor-backups/         편집기로 저장할 때 생성되는 자동 백업
