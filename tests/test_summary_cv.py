@@ -1,6 +1,10 @@
+import json
+import tempfile
 import unittest
+from pathlib import Path
 
-from scripts.build_site import build_summary_page, select_summary_works
+from scripts.build_site import build_page, build_summary_page, select_summary_works
+from scripts.check_output import check_pdf
 
 
 class SummaryPublicationSelectionTests(unittest.TestCase):
@@ -93,6 +97,31 @@ class SummaryPageTests(unittest.TestCase):
         self.assertNotIn("Private postal address", html)
         self.assertNotIn("Excluded Award", html)
         self.assertNotIn("profile.png", html)
+
+    def test_full_site_links_summary_pdf_from_english_only(self):
+        root = Path(__file__).resolve().parents[1]
+        profile = json.loads((root / "content" / "profile.json").read_text(encoding="utf-8"))
+        orcid = json.loads((root / "data" / "orcid.json").read_text(encoding="utf-8"))
+        overrides = json.loads((root / "content" / "publication_overrides.json").read_text(encoding="utf-8"))
+        en = json.loads((root / "content" / "cv.en.json").read_text(encoding="utf-8"))
+        ko = json.loads((root / "content" / "cv.ko.json").read_text(encoding="utf-8"))
+
+        english_html = build_page(profile, en, orcid, overrides)
+        korean_html = build_page(profile, ko, orcid, overrides)
+
+        self.assertIn("downloads/jae-won-choi-cv-summary-en.pdf", english_html)
+        self.assertIn("One-page CV", english_html)
+        self.assertNotIn("jae-won-choi-cv-summary-en.pdf", korean_html)
+
+
+class SummaryPdfValidationTests(unittest.TestCase):
+    def test_rejects_summary_pdf_with_more_than_one_page(self):
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            path = Path(temporary_directory) / "summary.pdf"
+            path.write_bytes(b"%PDF" + b"x" * 5_000 + b"/Type /Page /Type /Page")
+
+            with self.assertRaisesRegex(AssertionError, "Expected 1 PDF page, found 2"):
+                check_pdf(path, expected_pages=1)
 
 
 if __name__ == "__main__":

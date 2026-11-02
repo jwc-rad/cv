@@ -28,6 +28,7 @@ PREVIEW = ROOT / "preview"
 
 TARGET_NAME_VARIANTS = {"jae won choi", "jaewon choi", "jae-won choi", "choi jae won", "choi jaewon", "choi jae-won", "jw choi", "j w choi", "choi jw", "choi j w"}
 PDF_SLUG = "jae-won-choi-cv"
+SUMMARY_PDF_NAME = "jae-won-choi-cv-summary-en.pdf"
 BRAND = "Jae Won Choi"
 
 
@@ -344,6 +345,7 @@ def build_page(profile: dict[str, Any], cv: dict[str, Any], orcid: dict[str, Any
     generated = build_date()
     generated_iso = generated.strftime("%Y-%m-%d")
     pdf_download_name = pdf_name.replace(".pdf", f"-{generated_iso}.pdf")
+    summary_pdf_download_name = SUMMARY_PDF_NAME.replace(".pdf", f"-{generated_iso}.pdf")
     generated_text = (
         f"작성일 {generated.year}년 {generated.month}월 {generated.day}일"
         if is_ko
@@ -351,6 +353,12 @@ def build_page(profile: dict[str, Any], cv: dict[str, Any], orcid: dict[str, Any
     )
     email_links = "<br>".join(
         f'<a href="mailto:{e(email)}">{e(email)}</a>' for email in profile["contact"].get("emails", [])
+    )
+    summary_download_link = (
+        f'<span aria-hidden="true"> · </span><a class="cv-link" href="{prefix}downloads/{SUMMARY_PDF_NAME}" '
+        f'download="{e(summary_pdf_download_name)}">{e(labels["download_summary_pdf"])} ↓</a>'
+        if not is_ko
+        else ""
     )
     research_label = "연구 분야" if is_ko else "Research interests"
     focus = " · ".join(e(item) for item in cv.get("focus", []))
@@ -475,7 +483,7 @@ def build_page(profile: dict[str, Any], cv: dict[str, Any], orcid: dict[str, Any
           <div><dt>{e(labels['orcid'])}</dt><dd><a href="{e(profile['links']['orcid'])}" target="_blank" rel="me noopener">{e(profile['orcid_id'])}</a></dd></div>
           <div><dt>{e(labels['scholar'])}</dt><dd><a href="{e(profile['links']['google_scholar'])}" target="_blank" rel="noopener">Google Scholar</a></dd></div>
         </dl>
-        <a class="cv-link" href="{prefix}downloads/{pdf_name}" download="{e(pdf_download_name)}">{e(labels['download_pdf'])} ↓</a>
+        <div class="cv-downloads"><a class="cv-link" href="{prefix}downloads/{pdf_name}" download="{e(pdf_download_name)}">{e(labels['download_pdf'])} ↓</a>{summary_download_link}</div>
         <p class="print-date"><time datetime="{generated_iso}">{e(generated_text)}</time></p>
       </aside>
 

@@ -50,13 +50,15 @@ def check_html(path: Path, expected_lang: str) -> None:
         raise AssertionError(f"Broken local links in {path}: {missing}")
 
 
-def check_pdf(path: Path) -> int:
+def check_pdf(path: Path, expected_pages: int | None = None) -> int:
     data = path.read_bytes()
     if len(data) < 5_000 or not data.startswith(b"%PDF"):
         raise AssertionError(f"Invalid PDF: {path}")
     pages = len(re.findall(rb"/Type\s*/Page(?!s)\b", data))
     if pages < 1:
         raise AssertionError(f"Could not find PDF pages in {path}")
+    if expected_pages is not None and pages != expected_pages:
+        raise AssertionError(f"Expected {expected_pages} PDF page, found {pages}: {path}")
     return pages
 
 
@@ -65,7 +67,11 @@ def main() -> int:
     check_html(DIST / "en" / "index.html", "en")
     ko_pages = check_pdf(DIST / "downloads" / "jae-won-choi-cv-ko.pdf")
     en_pages = check_pdf(DIST / "downloads" / "jae-won-choi-cv-en.pdf")
-    print(f"Output checks passed: Korean PDF {ko_pages} pages, English PDF {en_pages} pages")
+    summary_pages = check_pdf(DIST / "downloads" / "jae-won-choi-cv-summary-en.pdf", expected_pages=1)
+    print(
+        "Output checks passed: "
+        f"Korean PDF {ko_pages} pages, English PDF {en_pages} pages, English summary PDF {summary_pages} page"
+    )
     return 0
 
 
