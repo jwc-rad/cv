@@ -6,6 +6,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
+import scripts.check_output as output_checks
 from scripts.build_site import build_page, build_summary_page, select_summary_works, summary_author_markup
 from scripts.check_output import check_pdf
 from scripts.render_pdfs import find_browser
@@ -187,6 +188,22 @@ class SummaryPageTests(unittest.TestCase):
 
 
 class SummaryPdfValidationTests(unittest.TestCase):
+    def test_validates_both_language_summary_pdfs_independently(self):
+        a4_media_box = b"/MediaBox [0 0 594.95996 841.91998]"
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            dist = Path(temporary_directory)
+            downloads = dist / "downloads"
+            downloads.mkdir()
+            (downloads / "jae-won-choi-cv-summary-en.pdf").write_bytes(
+                b"%PDF" + b"x" * 5_000 + b"/Type /Page " + a4_media_box
+            )
+            (downloads / "jae-won-choi-cv-summary-ko.pdf").write_bytes(
+                b"%PDF" + b"x" * 5_000 + b"/Type /Page /Type /Page " + a4_media_box
+            )
+
+            with self.assertRaisesRegex(AssertionError, "jae-won-choi-cv-summary-ko.pdf"):
+                output_checks.check_summary_pdfs(dist)
+
     def test_rejects_summary_pdf_with_more_than_one_page(self):
         with tempfile.TemporaryDirectory() as temporary_directory:
             path = Path(temporary_directory) / "summary.pdf"

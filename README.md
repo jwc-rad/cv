@@ -27,6 +27,7 @@ python scripts/editor_server.py
 - 영문 페이지: `/en/index.html`
 - 한글 PDF: `/downloads/jae-won-choi-cv-ko.pdf`
 - 영문 PDF: `/downloads/jae-won-choi-cv-en.pdf`
+- 한글 1페이지 요약 PDF: `/downloads/jae-won-choi-cv-summary-ko.pdf`
 - 영문 1페이지 요약 PDF: `/downloads/jae-won-choi-cv-summary-en.pdf`
 - ORCID 공개 논문, 저자, 저널, DOI 자동 동기화
 - 매월 1일 오전 4시 23분(Asia/Seoul) 자동 빌드·배포
@@ -90,7 +91,7 @@ content/                 직접 수정하는 한·영 CV 원본
 data/orcid.json          자동 생성되는 ORCID 스냅샷
 scripts/sync_orcid.py    ORCID 동기화
 scripts/build_site.py    정적 사이트 생성
-scripts/render_pdfs.py   Chrome/Edge 기반 전체·1페이지 요약 PDF 생성
+scripts/render_pdfs.py   Chrome/Edge 기반 전체·한영 1페이지 요약 PDF 생성
 scripts/check_output.py  링크·PDF 무결성 검사
 tests/                   1페이지 요약 선택·출력 회귀 테스트
 .github/workflows/       월간 동기화와 Pages 배포

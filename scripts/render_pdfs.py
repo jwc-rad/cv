@@ -88,6 +88,7 @@ def main() -> int:
     print(f"Using browser: {browser}")
     render(browser, DIST / "index.html", DIST / "downloads" / "jae-won-choi-cv-ko.pdf")
     render(browser, DIST / "en" / "index.html", DIST / "downloads" / "jae-won-choi-cv-en.pdf")
+    render(browser, ROOT / "preview" / "summary-ko.html", DIST / "downloads" / "jae-won-choi-cv-summary-ko.pdf")
     render(browser, ROOT / "preview" / "summary-en.html", DIST / "downloads" / "jae-won-choi-cv-summary-en.pdf")
     return 0
 

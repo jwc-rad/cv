@@ -79,19 +79,31 @@ def check_pdf(
     return pages
 
 
+def check_summary_pdfs(dist: Path) -> tuple[int, int]:
+    downloads = dist / "downloads"
+    ko_pages = check_pdf(
+        downloads / "jae-won-choi-cv-summary-ko.pdf",
+        expected_pages=1,
+        expected_page_size="A4",
+    )
+    en_pages = check_pdf(
+        downloads / "jae-won-choi-cv-summary-en.pdf",
+        expected_pages=1,
+        expected_page_size="A4",
+    )
+    return ko_pages, en_pages
+
+
 def main() -> int:
     check_html(DIST / "index.html", "ko")
     check_html(DIST / "en" / "index.html", "en")
     ko_pages = check_pdf(DIST / "downloads" / "jae-won-choi-cv-ko.pdf")
     en_pages = check_pdf(DIST / "downloads" / "jae-won-choi-cv-en.pdf")
-    summary_pages = check_pdf(
-        DIST / "downloads" / "jae-won-choi-cv-summary-en.pdf",
-        expected_pages=1,
-        expected_page_size="A4",
-    )
+    summary_ko_pages, summary_en_pages = check_summary_pdfs(DIST)
     print(
         "Output checks passed: "
-        f"Korean PDF {ko_pages} pages, English PDF {en_pages} pages, English summary PDF {summary_pages} page"
+        f"Korean PDF {ko_pages} pages, English PDF {en_pages} pages, "
+        f"Korean summary PDF {summary_ko_pages} page, English summary PDF {summary_en_pages} page"
     )
     return 0
 
