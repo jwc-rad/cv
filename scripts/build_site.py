@@ -24,6 +24,7 @@ CONTENT = ROOT / "content"
 ASSETS = ROOT / "assets"
 DATA = ROOT / "data"
 DIST = ROOT / "dist"
+PREVIEW = ROOT / "preview"
 
 TARGET_NAME_VARIANTS = {"jae won choi", "jaewon choi", "jae-won choi", "choi jae won", "choi jaewon", "choi jae-won", "jw choi", "j w choi", "choi jw", "choi j w"}
 PDF_SLUG = "jae-won-choi-cv"
@@ -92,6 +93,132 @@ def is_lead_work(work: dict[str, Any], overrides: dict[str, Any]) -> bool:
     if not contributors:
         return False
     return normalize_name(contributors[0].get("name")) in TARGET_NAME_VARIANTS
+
+
+def select_summary_works(
+    works: list[dict[str, Any]], overrides: dict[str, Any], put_codes: list[str]
+) -> list[dict[str, Any]]:
+    normalized_codes = [str(code) for code in put_codes]
+    if len(normalized_codes) != 4 or len(set(normalized_codes)) != 4:
+        raise ValueError("Summary CV requires four unique publication IDs")
+
+    by_code = {str(work.get("put_code") or ""): work for work in works}
+    selected = []
+    for put_code in normalized_codes:
+        work = by_code.get(put_code)
+        if work is None:
+            raise ValueError(f"Summary publication not found: {put_code}")
+        if not is_lead_work(work, overrides):
+            raise ValueError(f"Summary publication is not marked as lead: {put_code}")
+        selected.append(work)
+    return selected
+
+
+def build_summary_page(
+    profile: dict[str, Any],
+    cv: dict[str, Any],
+    orcid: dict[str, Any],
+    overrides: dict[str, Any],
+    summary_config: dict[str, Any],
+) -> str:
+    selected_works = select_summary_works(
+        orcid.get("works") or [], overrides, summary_config.get("selected_publication_put_codes") or []
+    )
+    experience_limit = int(summary_config.get("experience_limit") or 0)
+    experience = cv.get("experience", [])[:experience_limit]
+    generated = build_date()
+
+    def compact_items(items: list[dict[str, str]]) -> str:
+        rows = []
+        for item in items:
+            organization = item.get("organization")
+            organization_html = (
+                f'<span class="summary-organization">{e(organization)}</span>' if organization else ""
+            )
+            rows.append(
+                '<li>'
+                f'<span class="summary-period">{e(item.get("period"))}</span>'
+                f'<span class="summary-item-title">{e(item.get("title"))}</span>'
+                f'{organization_html}'
+                '</li>'
+            )
+        return '<ul class="summary-list">' + "".join(rows) + "</ul>"
+
+    publication_rows = []
+    for work in selected_works:
+        ids = work.get("external_ids") or {}
+        doi = ids.get("doi") or {}
+        doi_value = str(doi.get("value") or "")
+        doi_url = str(doi.get("url") or (f"https://doi.org/{doi_value}" if doi_value else ""))
+        doi_html = (
+            f'<a class="publication-doi" href="{e(doi_url)}">DOI: {e(doi_value)}</a>' if doi_value else ""
+        )
+        year = str((work.get("date") or {}).get("year") or "")
+        venue = " · ".join(part for part in (str(work.get("journal") or ""), year) if part)
+        publication_rows.append(
+            '<li>'
+            '<span class="publication-authors"><strong>Choi JW</strong>, et al.</span> '
+            f'<span class="publication-title">{e(work.get("title"))}</span>'
+            f'<div class="publication-meta">{e(venue)}{doi_html}</div>'
+            '</li>'
+        )
+
+    email_links = ", ".join(
+        f'<a href="mailto:{e(email)}">{e(email)}</a>' for email in profile.get("contact", {}).get("emails", [])
+    )
+    focus = " · ".join(e(item) for item in cv.get("focus", []))
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{e(cv.get('name'))} — One-page CV</title>
+  <link rel="stylesheet" href="../assets/summary.css">
+</head>
+<body>
+  <main class="summary-page">
+    <header class="summary-header">
+      <h1>{e(cv.get('name'))}</h1>
+      <p class="summary-role">{e(cv.get('role'))}</p>
+      <p class="summary-affiliation">{e(cv.get('affiliation'))}</p>
+      <p class="summary-contact">
+        <span>{email_links}</span>
+        <span><a href="{e(profile.get('links', {}).get('orcid'))}">ORCID {e(profile.get('orcid_id'))}</a></span>
+        <span><a href="{e(profile.get('links', {}).get('google_scholar'))}">Google Scholar</a></span>
+      </p>
+    </header>
+
+    <section class="summary-intro">
+      <p class="bio">{e(cv.get('bio'))}</p>
+      <p class="interests"><strong>Research interests:</strong> {focus}</p>
+    </section>
+
+    <div class="summary-columns">
+      <section class="summary-section">
+        <h2>Appointments &amp; Training</h2>
+        {compact_items(experience)}
+      </section>
+      <section class="summary-section">
+        <h2>Education</h2>
+        {compact_items(cv.get('education', []))}
+        <div class="summary-subsection">
+          <h2>Certification &amp; Licensure</h2>
+          {compact_items(cv.get('licenses', []))}
+        </div>
+      </section>
+    </div>
+
+    <section class="summary-section summary-publications">
+      <h2>Selected Publications</h2>
+      <ol class="publication-list">{"".join(publication_rows)}</ol>
+    </section>
+
+    <footer class="summary-footer">Generated {generated.day} {generated.strftime('%B %Y')}</footer>
+  </main>
+</body>
+</html>
+"""
 
 
 def render_publication_item(work: dict[str, Any], is_lead: bool, star_label: str = "") -> str:
@@ -401,7 +528,13 @@ def build_page(profile: dict[str, Any], cv: dict[str, Any], orcid: dict[str, Any
 
 
 def main() -> int:
-    required = [CONTENT / "profile.json", CONTENT / "cv.ko.json", CONTENT / "cv.en.json", DATA / "orcid.json"]
+    required = [
+        CONTENT / "profile.json",
+        CONTENT / "cv.ko.json",
+        CONTENT / "cv.en.json",
+        CONTENT / "cv.summary.en.json",
+        DATA / "orcid.json",
+    ]
     missing = [str(path.relative_to(ROOT)) for path in required if not path.exists()]
     if missing:
         raise FileNotFoundError(f"Missing required files: {', '.join(missing)}")
@@ -429,8 +562,13 @@ def main() -> int:
 
     ko = load_json(CONTENT / "cv.ko.json")
     en = load_json(CONTENT / "cv.en.json")
+    summary_en = load_json(CONTENT / "cv.summary.en.json")
     (DIST / "index.html").write_text(build_page(profile, ko, orcid, overrides), encoding="utf-8")
     (DIST / "en" / "index.html").write_text(build_page(profile, en, orcid, overrides), encoding="utf-8")
+    PREVIEW.mkdir(parents=True, exist_ok=True)
+    (PREVIEW / "summary-en.html").write_text(
+        build_summary_page(profile, en, orcid, overrides, summary_en), encoding="utf-8"
+    )
     (DIST / ".nojekyll").write_text("", encoding="utf-8")
 
     base_url = str(profile.get("site", {}).get("base_url") or "").rstrip("/")
@@ -450,7 +588,7 @@ def main() -> int:
         )
         (DIST / "sitemap.xml").write_text(sitemap, encoding="utf-8")
     (DIST / "robots.txt").write_text("\n".join(robots_lines) + "\n", encoding="utf-8")
-    print(f"Built Korean and English pages in {DIST.relative_to(ROOT)}")
+    print(f"Built Korean and English pages in {DIST.relative_to(ROOT)} and English summary print source")
     return 0
 
 
