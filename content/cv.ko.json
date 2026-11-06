@@ -114,6 +114,12 @@
   "projects": [],
   "awards": [
     {
+      "title": "2026 KSUM Young Investigator Award Grand Prix",
+      "organization": "대한초음파의학회",
+      "date": "2026.04",
+      "detail": ""
+    },
+    {
       "title": "FeTA Challenge 2024 Biometry 부문 1위",
       "organization": "MICCAI / University of Zurich",
       "date": "2024.10",
@@ -144,5 +150,36 @@
       "detail": ""
     }
   ],
-  "presentations": []
+  "presentations": [
+    {
+      "title": "Pediatric Musculoskeletal US-Guided Procedures",
+      "venue": "KSUM (KOREAN SOCIETY OF ULTRASOUND IN MEDICINE) 2026",
+      "year": "2026.05",
+      "type": "강의"
+    },
+    {
+      "title": "Artificial Intelligence–Driven B-Mode Ultrasound Assessment of Pediatric Hepatic Steatosis: A Prospective Validation Study",
+      "venue": "KSUM (KOREAN SOCIETY OF ULTRASOUND IN MEDICINE) 2026",
+      "year": "2026.05",
+      "type": "구연"
+    },
+    {
+      "title": "Deep Learning–based Bone Mineral Density Prediction Using Pediatric Chest Radiographs: A Multicenter Feasibility Study",
+      "venue": "2026 대한소아영상의학회 춘계학술대회",
+      "year": "2026.04",
+      "type": "구연"
+    },
+    {
+      "title": "Pediatric Liver US",
+      "venue": "2026 서울대학교병원 소아영상진단 연수강좌",
+      "year": "2026.04",
+      "type": "강의"
+    },
+    {
+      "title": "Deep Learning-Based Approach for Predicting Bone Mineral Density in Children using Chest Radiographs",
+      "venue": "SPR (Society for Pediatric Radiology) 2025",
+      "year": "2025.04",
+      "type": "구연"
+    }
+  ]
 }
