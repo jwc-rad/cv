@@ -133,6 +133,8 @@ class SummaryPageTests(unittest.TestCase):
 
         self.assertIn('<html lang="ko">', html)
         self.assertIn('<body class="lang-ko">', html)
+        # CI runners have no CJK system fonts; the page must load Korean web fonts itself.
+        self.assertIn("fonts.googleapis.com/css2?family=Noto+Sans+KR", html)
         self.assertIn("서울대학교병원 소아영상의학 진료교수입니다.", html)
         self.assertIn("영상의학과 진료교수", html)
         self.assertIn("경력", html)
