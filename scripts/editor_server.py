@@ -7,6 +7,7 @@ import argparse
 import json
 import secrets
 import shutil
+import socket
 import subprocess
 import sys
 import threading
@@ -116,6 +117,28 @@ def run_build() -> tuple[bool, str]:
     return True, "\n".join(logs).strip()
 
 
+class EditorHTTPServer(ThreadingHTTPServer):
+    """Refuse to share a port with another process.
+
+    HTTPServer enables SO_REUSEADDR by default. On Windows that flag lets a second
+    process bind a port that is already in use, so the browser can end up talking
+    to an unrelated server (e.g. a Node dev server answering "Cannot GET /editor/").
+    """
+
+    allow_reuse_address = sys.platform != "win32"
+
+    def server_bind(self) -> None:
+        if sys.platform == "win32" and hasattr(socket, "SO_EXCLUSIVEADDRUSE"):
+            self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_EXCLUSIVEADDRUSE, 1)
+        super().server_bind()
+
+
+def port_in_use(port: int) -> bool:
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as probe:
+        probe.settimeout(0.3)
+        return probe.connect_ex(("127.0.0.1", port)) == 0
+
+
 class EditorHandler(SimpleHTTPRequestHandler):
     server_version = "CVEditor/1.0"
 
@@ -221,8 +244,11 @@ def serve(port: int, token: str, open_browser: bool) -> int:
     server: ThreadingHTTPServer | None = None
     selected_port = port
     for candidate in range(port, port + 10):
+        if port_in_use(candidate):
+            print(f"127.0.0.1:{candidate} 포트는 다른 프로그램이 사용 중이라 건너뜁니다.")
+            continue
         try:
-            server = ThreadingHTTPServer(("127.0.0.1", candidate), handler)
+            server = EditorHTTPServer(("127.0.0.1", candidate), handler)
             selected_port = candidate
             break
         except OSError:
